@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <p id="bmi"></p>
+        
+        <script>
+        function getQueryVariable(variable){
+        var vars = variable.split("/");
+        var w = vars.slice(2,3);
+        var h = vars.slice(3,4);
+        bmi = Math.round(w/((h/100)*(h/100)))
+;
+        if (bmi < 16) { 
+            return bmi + " < 16: Severely underweight";
+        } else if (bmi < 18.5) {
+            return "16 <= " + bmi + " < 18.5: Underweight";
+        } else if (bmi < 25) {
+            return "18.5 <= " + bmi + " < 25: Normal";
+        } else if (bmi < 30) {
+            return "25 <= " + bmi + " < 30: Overweight";
+        } else {
+            return bmi + " > 30: Obese";
+       }
+}
+document.getElementById("bmi").innerHTML = getQueryVariable(window.location.pathname);
+        </script>
+</body>
+</html>
