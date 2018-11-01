@@ -1,0 +1,21 @@
+/* global css */
+/* selector {
+property name: property value} */
+html,body {
+    height: 100%;
+}
+* {
+    font-family: 'Mali', cursive;
+}
+h2,ol {
+    color:darkgray;
+}
+
+#root {
+    background-image: url(https://images.unsplash.com/photo-1539947150313-2bcb900a8510?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=58b3977201b4ed92a50de4cf4a60d2e1&auto=format&fit=crop&w=1950&q=80);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
